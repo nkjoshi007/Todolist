@@ -16,21 +16,22 @@ const Input=()=>{
 
     return(
         <>
-                <div className="Todolist">
-                    <h1>Todo List</h1>
+        <div className="Todolist">
         <input type="text" value={list} onChange={e=>setlist(e.target.value)}/>
         <button className="btn" onClick={addlist}>Add list</button>
         </div>
-       {todo.map((item)=>(
+       {
+       todo.map((item)=>(
         <div className="list">
-           <ul>
-            <li><input key={count} type="checkbox"/>
-            <label htmlFor="vehicle1">{item}</label>
+            <h3>Your Todo no. {count}</h3>
+        <ul>
+        <li><input key={count} type="checkbox"/>
+        <label htmlFor="vehicle1">{item}</label>
         <button className="btn">Edit</button>
         <button className="btn" onClick={addlist}>Delete</button>
         </li>
-              </ul>
-              </div>
+        </ul>
+        </div>
        ))}
         </>
     )
