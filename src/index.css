@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.heading{
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading p{
+  font-size: 20px;
+  font-family: 'EB Garamond', serif;
+}
+.Todolist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 20px;
+}
+.Todolist input{
+  margin: 10px 10px;
+  font-size: 20px;
+}
+.btn{
+  color: black;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.btn:hover{
+  color: white;
+  background-color: black;
+}
+.list ul{
+list-style: none;
 }
