@@ -19,9 +19,10 @@ export const Todos = ({handleEditClick, editFormVisibility}) => {
             <p className='todoText' style={todo.completed===true?{border:'1px solid rgb(41, 189, 51)',padding:'5px'}:{textDecoration:'none'}}>
                 {todo.todo}
             </p>
-        </div>
+        </div> 
+        
         <div className='actions-box'>
-              {editFormVisibility===false&&(
+              {editFormVisibility===false&& (
                 <>
                   <span onClick={()=>handleEditClick(todo)}><Icon className='icon' icon={edit2}/></span>
                   <span onClick={()=>dispatch(removeTodo(todo.id))}><Icon className='icon icon-delete' icon={trash}/></span>
