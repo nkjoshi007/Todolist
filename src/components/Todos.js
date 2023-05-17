@@ -11,16 +11,15 @@ export const Todos = ({handleEditClick, editFormVisibility}) => {
   const todos = useSelector((state)=>state.operationsReducer);
   return todos.map((todo)=>(
     <div key={todo.id} className='todo-box'>
-        <div className='content'>
-            {editFormVisibility===false&&(
-              <input type="checkbox" checked={todo.completed}
-              onChange={()=>dispatch(handleCheckbox(todo.id))}></input>
-            )}
-            <p className='todoText' style={todo.completed===true?{border:'1px solid rgb(41, 189, 51)',padding:'5px'}:{textDecoration:'none'}}>
-                {todo.todo}
-            </p>
-        </div> 
-        
+  <div className='content'>
+  {editFormVisibility===false&&(
+  <input type="checkbox" checked={todo.completed}
+  onChange={()=>dispatch(handleCheckbox(todo.id))}></input>
+  )}
+  <p className='todoText' style={todo.completed===true?{border:'1px solid rgb(41, 189, 51)',padding:'5px'}:{textDecoration:'none'}}>
+  {todo.todo}
+  </p>
+  </div> 
         <div className='actions-box'>
               {editFormVisibility===false&& (
                 <>
