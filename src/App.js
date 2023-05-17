@@ -24,13 +24,12 @@ function App() {
 
     return (
     <div className="wrapper">
-      <br></br>
-      <h1 className="text-center">TODO-APP USING REACT-REDUX</h1>
+      <h1 className="nowrap">TODO-APP USING REACT-REDUX</h1>
       <Form editFormVisibility={editFormVisibility} editTodo={editTodo}
       cancelUpdate={cancelUpdate}/>
       <Todos handleEditClick={handleEditClick} editFormVisibility={editFormVisibility}/>
       {todos.length > 1 && (
-        <button className='btn btn-danger btn-md delete-all'
+        <button className='btn'
         onClick={()=>dispatch(deleteAll())}>DELETE ALL</button>
       )}
     </div>

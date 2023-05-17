@@ -3,32 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+background-color: black;
+color: aliceblue;
+}
 
 .wrapper{
-  max-width: 1440px;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 40vw;
+  padding: 20vh 20vh;
+  margin: 14vh auto;
+  border: 2px solid white;
 }
 
-.custom-form{
-  width: 400px;
-  height: auto;
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 10vw;
   margin: 20px auto;
 }
-
-.input-and-btn{
+.label{
+  margin: 20px 0px;
+  font-size: 2vw;
+  white-space: nowrap;
+}
+.nowrap{
+  white-space: nowrap;
+}
+input{
+  border-radius: 10px;
+}
+.addForm{
   display: flex;
 }
 
 .todo-box{
   width: 400px;
-  margin: 0 auto;
+  margin: auto auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -39,7 +55,7 @@
 }
 
 .todo-box .content p{
-  margin-top: -6px;
+  margin-top: 6px;
   margin-left: 6px;
 }
 
@@ -58,4 +74,30 @@
 .back-btn{
   margin-top: 5px;
   width: 100%;
+}
+.btn{
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: black;
+  color: aliceblue;
+  border: 1px solid white;
+}
+.icon:hover{
+  background-color: aliceblue;
+  color: black;
+ 
+}
+.icon{
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(20, 156, 52);
+}
+.icon-delete{
+  color: red;
 }

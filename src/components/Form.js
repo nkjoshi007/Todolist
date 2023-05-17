@@ -4,21 +4,16 @@ import { addTodo, handleEditSubmit } from '../redux/todoapp/actions';
 
 export const Form = ({editFormVisibility, editTodo, cancelUpdate}) => {
 
-  // dispatch function to dispatch an action
   const dispatch = useDispatch();
 
-  // todo value state for normal add todo form
   const [todoValue, setTodoValue]=useState('');
 
-  // state for if someone changes the (to edit) value in update form
   const [editValue, setEditValue]=useState('');
 
-  // useEffect is to show the (to edit) value in update form
   useEffect(()=>{
     setEditValue(editTodo.todo);
   },[editTodo])
 
-  // normal add todo submit
   const handleSubmit=(e)=>{
       e.preventDefault();
       let date = new Date();
@@ -32,7 +27,6 @@ export const Form = ({editFormVisibility, editTodo, cancelUpdate}) => {
       dispatch(addTodo(todoObj))
   }
 
-  // update form submit
   const editSubmit = (e) =>{
     e.preventDefault();
     let editedObj={
@@ -46,17 +40,17 @@ export const Form = ({editFormVisibility, editTodo, cancelUpdate}) => {
   return (
     <>
       {editFormVisibility===false?(
-        <form className='form-group custom-form' onSubmit={handleSubmit}>
-          <label>Add your todo-items</label>
-          <div className='input-and-btn'>
-              <input type="text" className='form-control' required
+        <form className='form' onSubmit={handleSubmit}>
+          <label className='label'>Add your todo-items</label>
+          <div className='addForm'>
+              <input type="text" placeholder='enter your TODO' className='form-control' required
               value={todoValue} onChange={(e)=>setTodoValue(e.target.value)}/>
-              <button type="submit" className='btn btn-secondary btn-md'>ADD</button>
+              <button type="submit" className='btn'>ADD</button>
           </div>
         </form>
       ):(
         <form className='form-group custom-form' onSubmit={editSubmit}>
-          <label>Update your todo-items</label>
+          <label className='label'>Update your todo-items</label>
           <div className='input-and-btn'>
               <input type="text" className='form-control' required
               value={editValue||""} onChange={(e)=>setEditValue(e.target.value)}/>
